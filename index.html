@@ -1,305 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kuchoriya TechSoft</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: transparent;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay Pandey Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+           /* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
 
-    /* Header Section */
-    header {
-      background-color: #000c40;
-      color: #fff;
-      padding: 20px 40px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    .logo img {
-      height: 40px;  /* Adjust based on your logo size */
-      margin-right: 15px;
-    }
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #cc95c0, #dbd4b4, #7aa1d2);  /* Using the gradient */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    .logo {
-      display: flex;
-      align-items: center;
-      font-weight: 600;
-      font-size: 1.8rem;
-    }
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
 
-    nav {
-      display: flex;
-      gap: 30px;
-    }
+header h1 {
+    font-size: 2rem;
+}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
+header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
 
-    nav a:hover {
-      color: #ffd194;  /* Soft yellow/golden color on hover */
-    }
+header ul li {
+    margin-left: 1.5rem;
+}
 
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(45deg, #000c40, #ffd194);
-      padding: 120px 20px;
-      text-align: center;
-      color: #fff;
-      position: relative;
-    }
+header ul li a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-    }
+header ul li a:hover {
+    color: #FFEB3B;
+}
 
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #cc95c0, #dbd4b4, #7aa1d2);  /* Gradient for hero section */
+    color: white;
+}
 
-    .cta-btn {
-      background-color: #ffd194;
-      padding: 15px 30px;
-      border: none;
-      color: #000;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background-color 0.3s;
-    }
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
 
-    .cta-btn:hover {
-      background-color: #000c40;
-      color: #fff;
-    }
+#hero .button {
+    display: inline-block;
+    background: #7aa1d2;  /* Soft blue for button */
+    color: #333;
+    padding: 0.7rem 1.5rem;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
 
-    /* About Us Section with Fixed Background */
-    #about {
-      background-image: url('https://www.kuchoriyatechsoft.com/images/web_development_bg.png');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;  /* Fixes the background image */
-      padding: 100px 20px;
-      color: #000000;
-      text-align: center;
-      height: 500px;
-      background-color: transparent;
-    }
+#hero .button:hover {
+    background: #cc95c0;  /* Light pink for hover effect */
+    transform: translateY(-5px);
+}
 
-    #about h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
+/* About Section */
+#about {
+    padding: 3rem 1rem;
+    text-align: center;
+    background: #f9f9f9;
+}
 
-    #about p {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
 
-    /* Services Section */
-    #services {
-      padding: 60px 20px;
-      color: #000000;
-      background-color: transparent;
-      text-align: center;
-    }
+#about p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-    }
+/* Skills Section */
+#skills {
+    padding: 3rem 1rem;
+    text-align: center;
+    background: #dbd4b4;  /* Light yellow background for skills section */
+}
 
-    .service-card {
-      background-color: #f9f9f9;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
 
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    }
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
 
-    .service-card h3 {
-      margin-bottom: 15px;
-      font-size: 1.5rem;
-    }
+.skill {
+    width: 250px;
+    text-align: left;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s;
+}
 
-    /* Footer Section */
-    footer {
-      background-color: #000c40;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
 
-    footer h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
 
-    footer p {
-      font-size: 1rem;
-      margin: 10px 0;
-    }
+.skill-header i {
+    font-size: 2rem;
+    color: #7aa1d2;  /* Soft blue for icons */
+}
 
-    footer .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-bottom: 20px;
-    }
+.skill h3 {
+    font-size: 1.4rem;
+    color: #333;
+}
 
-    footer .footer-links a {
-      color: #ffd194;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
+.skill-bar-background {
+    background: #ddd;
+    border-radius: 5px;
+    height: 12px;
+    width: 100%;
+}
 
-    footer .footer-links a:hover {
-      color: #fff;
-    }
+.skill-bar {
+    background-color: #7aa1d2;  /* Soft blue for skill bar */
+    height: 100%;
+    border-radius: 5px;
+}
 
-    /* Responsive Design */
-    @media (max-width: 1024px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
+.skill-bar-background {
+    margin-top: 0.5rem;
+}
 
-      nav {
-        flex-direction: column;
-        gap: 15px;
-      }
+/* Projects Section */
+#projects {
+    background: white;
+    padding: 3rem 1rem;
+    text-align: center;
+}
 
-      .hero h1 {
-        font-size: 2.8rem;
-      }
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
 
-      .cta-btn {
-        padding: 12px 25px;
-      }
+.project {
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
 
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-      }
-    }
+.project:hover {
+    transform: translateY(-10px);
+}
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
+.project p {
+    padding: 1rem;
+    background: #f4f4f4;
+}
 
-      .cta-btn {
-        padding: 10px 20px;
-      }
+.project a {
+    display: block;
+    background: #7aa1d2;  /* Soft blue background for project links */
+    color: white;
+    padding: 0.7rem;
+    text-align: center;
+}
 
-      .services-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
+.project a:hover {
+    background: #cc95c0;  /* Light pink for hover effect */
+}
 
-      .service-card {
-        padding: 20px;
-      }
-    }
+/* Socials Section */
+#socials {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #7aa1d2;  /* Soft blue background for social section */
+    color: white;
+}
 
-    @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
+#socials h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
 
-      .cta-btn {
-        padding: 10px 18px;
-      }
+#socials a {
+    margin: 0 15px;
+    font-size: 2rem;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
 
-      .services-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-      }
+#socials a:hover {
+    color: #FFEB3B;
+    transform: scale(1.2);
+}
 
-      .service-card {
-        padding: 15px;
-      }
-    }
-  </style>
+/* Contact Section */
+#contact {
+    padding: 3rem 1rem;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form input,
+#contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+    font-size: 1rem;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    background: #7aa1d2;  /* Soft blue button */
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#contact-form button:hover {
+    background: #cc95c0;  /* Light pink hover effect */
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Resume Section */
+#resume {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #f4f4f4;
+}
+
+#resume h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#resume a {
+    display: inline-block;
+    background: #7aa1d2;  /* Soft blue for resume download link */
+    color: white;
+    padding: 0.7rem 1.5rem;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#resume a:hover {
+    background: #cc95c0;  /* Light pink for hover effect */
+    transform: translateY(-5px);
+}
+
+    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <h1>My Portfolio</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#socials">Follow Me</a></li>
+                <li><a href="#resume">My Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <header>
-    <div class="logo">
-      <img src="https://www.kuchoriyatechsoft.com/images/kuchoriya.png" alt="Kuchoriya TechSoft Logo">
-      Kuchoriya TechSoft
+    <section id="hero">
+        <h2>Hi, I'm Ajay Pandey</h2>
+        <p>A passionate Computer Science and Engineering student specializing in Java development.</p>
+        <a href="#projects" class="button">View My Work</a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm a Computer Science and Engineering student with a focus on Java development.
+            I love creating impactful solutions and contributing to innovative projects. <br>
+            Basically i am from Satna(M.P),but currently i am staying in Ameerpeth(Hyderabad). <br>
+            I am a Software Engineer searching for  good opportunity in IT sector. <br>
+            I am parsuing my B-Tech form Indrashil University(Gujrat),and before that i had
+             completed my 12th from Kopal H.S School(Bhopal),and  before that i did my 10th
+              from Kopal H.S School in year(2018). <br>
+            I have sound knowledge in Java,AdvJava,,HTML,CSS,Javascript,Oracle(SQL),DSA and
+            i have some basic knowledge in python as well. <br>
+            My ambition is to be become a software professional and java developer.
+
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <div class="skill-header">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                </div>
+                <div class="skill-bar-background">
+                    <div class="skill-bar" style="width: 95%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML & CSS</h3>
+                </div>
+                <div class="skill-bar-background">
+                    <div class="skill-bar" style="width: 100%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-bar-background">
+                    <div class="skill-bar" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <i class="fas fa-database"></i>
+                    <h3>Oracle(SQL)</h3>
+                </div>
+                <div class="skill-bar-background">
+                    <div class="skill-bar" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <i class="fab fa-java"></i>
+                    <h3>Adv java</h3>
+                </div>
+                <div class="skill-bar-background">
+                    <div class="skill-bar" style="width: 70%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                </div>
+                <div class="skill-bar-background">
+                    <div class="skill-bar" style="width: 70%;"></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    </section>
 
-  <section class="hero">
-    <h1>Innovating the Future of Technology</h1>
-    <p>Your trusted partner in digital transformation</p>
-    <button class="cta-btn">Get Started</button>
-  </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We are Kuchoriya TechSoft, driving digital solutions to shape the future of technology. Our team of experts provides innovative services that help businesses grow and thrive in a digital-first world.</p>
-  </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1: Basic Banking App</h3>
+            <p>A Java-based e-commerce platform with features like search, payment integration, and user accounts.</p>
+            <a href="https://ajaypandey2908.github.io/BankingApp/">Click here for view project</a>
+        </div>
+        <div class="project">
+            <h3>Project 2: Basic Calculator App</h3>
+            <p>A task management app for doing Calculations and basic operations.</p>
+            <a href="https://ajaypandey2908.github.io/CalculatorApp/">Click here for view project</a>
+        </div>
+        <div class="project">
+            <h3>Project 3: Color Picker App</h3>
+            <p>A color picker is a graphical user interface (GUI) component that allows users to select and manipulate colors visually. It is widely used in design tools, web applications, and graphics editing software 
+                to let users choose colors for text, backgrounds, graphics, and more..</p>
+            <a href="https://ajaypandey2908.github.io/ColorPickerApp/">Click here for view project</a>
+        </div>
+        <div class="project">
+            <h3>Project 4: Task Manager App</h3>
+            <p>A Task Manager application is a software tool designed to help users organize, manage, and track tasks efficiently. </p>
+            <a href="https://ajaypandey2908.github.io/TaskManager-App/">Click here for view project</a>
+        </div>
+        <div class="project">
+            <h3>Project 5: Personal Portfolio website</h3>
+            <p>A personal portfolio website created using HTML, CSS, and JavaScript is a modern and interactive platform for showcasing your skills, achievements, and projects. This type of website leverages core web technologies 
+                to deliver a clean, responsive, and engaging user experience.</p>
+            <a href="https://ajaypandeyweb.netlify.app">Click here for view project</a>
+        </div>
+    </section>
+    
+    <section id="socials">
+        <h2>Follow Me</h2>
+        <p>Connect with me on my social media platforms:</p>
+        <a href="https://github.com/ajaypandey2908" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/ajaypandey2002" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="mailto:ajaypandey2002@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+    </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Web Development</h3>
-        <p>Building modern, scalable websites tailored to your business needs.</p>
-      </div>
-      <div class="service-card">
-        <h3>App Development</h3>
-        <p>Creating seamless mobile applications to enhance user experience.</p>
-      </div>
-      <div class="service-card">
-        <h3>Consulting</h3>
-        <p>Providing expert advice to help businesses scale and innovate.</p>
-      </div>
-    </div>
-  </section>
+    <section id="resume">
+        <h2>My Resume</h2>
+        <a href="https://onedrive.live.com/?cid=BF5784DB8B8BAFAA&id=BF5784DB8B8BAFAA%21s3af6f9dacadc413f90d82717276a7227&parId=root&o=OneUp" download>Download My Resume</a>
+    </section>
 
-  <footer>
-    <h2>Contact Us</h2>
-    <p>Email: contact@kuchoriyatechsoft.com</p>
-    <p>Phone: +1 234 567 890</p>
-    <div class="footer-links">
-      <a href="#about">About Us</a>
-      <a href="#services">Our Services</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <p>&copy; 2024 Kuchoriya TechSoft. All Rights Reserved.</p>
-  </footer>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
+    <footer>
+        <p>&copy; 2025 Ajay Pandey. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    if (name && email && message) {
+        alert(`Thank you, ${name}! Your message has been sent.`);
+        document.getElementById("contact-form").reset();
+    } else {
+        alert("Please fill out all fields.");
+    }
+});
+    </script>
 </body>
 </html>
